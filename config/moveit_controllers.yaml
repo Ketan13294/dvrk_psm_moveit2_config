@@ -1,0 +1,19 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - psm1_arm_controller
+
+  psm1_arm_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - outer_yaw
+      - outer_pitch_1
+      - outer_insertion
+      - outer_roll
+      - outer_wrist_pitch
+      - outer_wrist_yaw

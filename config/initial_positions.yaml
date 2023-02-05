@@ -1,0 +1,9 @@
+# Default initial positions for dvrk_psm's ros2_control fake system
+
+initial_positions:
+  outer_insertion: 0
+  outer_pitch_1: 0
+  outer_roll: 0
+  outer_wrist_pitch: 0
+  outer_wrist_yaw: 0
+  outer_yaw: 0

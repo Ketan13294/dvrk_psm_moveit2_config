@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="dvrk_psm">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import dvrk_psm urdf file -->
+    <xacro:include filename="$(find dvrk_model)/model/PSM1.urdf.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="dvrk_psm.ros2_control.xacro" />
+
+
+    <xacro:dvrk_psm_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>
